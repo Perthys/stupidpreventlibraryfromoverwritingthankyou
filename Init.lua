@@ -8,4 +8,12 @@ local function Init()
     }, shared.PerthScript)
 end
 
+function shared.PerthScript:AddStorageTable(Name) 
+    if not self[Name] then
+        self[Name] = {};
+    end
+    
+    return self[Name];
+end
+
 return Init()
